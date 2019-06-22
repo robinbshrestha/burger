@@ -2,12 +2,13 @@ import React from 'react';
 import classes from './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
-
+//transforms an obj of kv pairs into array of ingredients
+//where value of obj is important for how many ingredients i need and key is impt for the type of ingredient i need
 const burger = (props) => {
     let transformedIngredients = Object.keys(props.ingredients)
         .map(igKey => {
-            return [...Array(props.ingredients[igKey])].map((_, i) => { //transforms an obj of kv pairs into array of ingredients
-                return <BurgerIngredient key={igKey + i} type={igKey} /> //where value of obj is important for how many ingredients i need and key is impt for the type of ingredient i need
+            return [...Array(props.ingredients[igKey])].map((_, i) => { 
+                return <BurgerIngredient key={igKey + i} type={igKey} /> 
             });
         })
         .reduce((arr, el) => {
