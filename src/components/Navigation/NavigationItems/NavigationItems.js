@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import classes from './NavigationItems.css';
 
 const navigationItems = () => (
-    <ul>
+    <ul className={classes.NavigationItems}>
     </ul>
 );
 
-export default navigationItems;
+export default navigationItems; 
