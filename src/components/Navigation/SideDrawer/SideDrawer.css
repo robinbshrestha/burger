@@ -27,3 +27,7 @@
     transform: translateX(-100%) 
     /* shifts to left */
 }
+
+.Logo {
+    height: 11%;
+}
